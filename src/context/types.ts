@@ -1,0 +1,7 @@
+export const types = {
+    LOADING: 'LOADING',
+    LOGIN: 'LOGIN',
+    LOGOUT: 'LOGOUT',
+    SET_CATEGORIES: 'SET_CATEGORIES',
+    SET_GASTOS: 'SET_GASTOS'
+}

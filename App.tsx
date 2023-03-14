@@ -1,20 +1,15 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+//context
+import AppContextProvider from './src/context/AppContextProvider'
+import FirebaseProvider from './src/firebase/FirebaseProvider'
+
+import AppWrapper from './src/components/AppWrapper';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <AppContextProvider>
+      <FirebaseProvider>
+        <AppWrapper />
+      </FirebaseProvider>
+    </AppContextProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
